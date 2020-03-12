@@ -9,7 +9,7 @@ def update():
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
-                print("Hello Allan")
+                print("Hello Allan & Peter")
 
 
 def draw():
@@ -22,7 +22,8 @@ def init():
     pygame.display.set_icon(icon)
     pygame.display.set_caption(TITLE)
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    screen.fill((255, 255, 255))
+    screen.fill((255, 0, 255))
+    # TODO Draw a rectangle
 
 
 def main():
