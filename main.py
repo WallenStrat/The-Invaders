@@ -1,7 +1,7 @@
 import pygame
 
 WIDTH = 800
-HEIGHT = 600
+HEIGHT = 500
 TITLE = "Invaders"
 
 
