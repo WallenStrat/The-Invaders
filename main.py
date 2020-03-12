@@ -5,5 +5,5 @@ def main():
 	print("Hello world!")
 
 
-if __name__ = "__main"
+if __name__ == "__main"
 	main()
