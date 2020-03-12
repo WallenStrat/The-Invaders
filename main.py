@@ -1,7 +1,7 @@
 import pygame
 
 WIDTH = 800
-HEIGHT = 500
+HEIGHT = 600
 TITLE = "Invaders"
 
 
@@ -22,7 +22,7 @@ def init():
     pygame.display.set_icon(icon)
     pygame.display.set_caption(TITLE)
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    screen.fill((255, 0, 255))
+    screen.fill((255, 255, 255))
     # TODO Draw a rectangle
 
 
