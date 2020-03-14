@@ -8,12 +8,8 @@ game = 0
 
 
 def update():
-    for event in pygame.event.get():
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                print("Hello Allan & Peter")
-
     game.update()
+    pygame.event.get()
 
 
 def draw():
@@ -33,9 +29,8 @@ def main():
     init()
     running = True
     while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
+        for event in pygame.event.get(pygame.QUIT):
+            running = False
         update()
         draw()
 

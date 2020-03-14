@@ -13,6 +13,7 @@ class Player:
         self.h = h
         self.color = color
         self.player = pygame.image.load(FOLDER_IMG + "player_128px.png")
+        self.player_move_right = False
 
     def draw(self):
         # rectangle1 = pygame.Rect(self.x, self.y, self.w, self.h)
@@ -24,14 +25,19 @@ class Player:
 
     def update(self):
         # print("Update Player")
-        for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_d:
-                    print("Move RIGHT")
-                    self.x = self.x + SPEED
+        for event in pygame.event.get(pygame.KEYDOWN):
+            if event.key == pygame.K_d:
+                print("Move RIGHT")
+        # if self.player_move_right:
+        #     print("Move RIGHT")
+        #     self.x = self.x + SPEED
 
     def get_x(self):
         return self.x
 
     def set_x(self, x):
         self.x = x
+
+    def set_player_move_right(self, value):
+        self.player_move_right = value
+
