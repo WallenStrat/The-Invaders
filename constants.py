@@ -9,7 +9,7 @@ player_w = 128
 player_h = 128
 player_pos_x = WIDTH / 2 - player_w / 2
 player_pos_y = HEIGHT * 0.83 - player_h
-SPEED = 2
+SPEED = 5
 
 # Colors
 GREEN = (0x00, 255, 0)

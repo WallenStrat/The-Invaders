@@ -28,11 +28,15 @@ def init():
 def main():
     init()
     running = True
+    clock = pygame.time.Clock()
     while running:
-        for event in pygame.event.get(pygame.QUIT):
+        if pygame.event.get(pygame.QUIT):
             running = False
         update()
         draw()
+        clock.tick(60)
+        print(clock.get_time())
+        # print("tick " + str(pygame.time.get_ticks()))
 
     pygame.quit()
 
