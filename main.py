@@ -1,8 +1,10 @@
 import pygame
 
-WIDTH = 800
-HEIGHT = 600
-TITLE = "Invaders"
+from Game import *
+from constants import *
+
+screen = 0
+game = 0
 
 
 def update():
@@ -11,19 +13,20 @@ def update():
             if event.key == pygame.K_a:
                 print("Hello Allan & Peter")
 
+    game.update()
+
 
 def draw():
+    game.draw()
     pygame.display.update()
 
 
 def init():
-    pygame.init()
-    icon = pygame.image.load("assets/comet_32x32px.png")
-    pygame.display.set_icon(icon)
-    pygame.display.set_caption(TITLE)
-    screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    screen.fill((255, 255, 255))
-    # TODO Draw a rectangle
+    global screen
+    global game
+    game = Game(WIDTH, HEIGHT, CAPTION)
+    game.run()
+    # screen = game.get_screen()
 
 
 def main():
